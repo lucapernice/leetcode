@@ -45,6 +45,29 @@ Another optimization could be using a heuristic or greedy algorithm to rearrange
 
 Finally, you could consider using parallel processing or distributed computing techniques to generate the permutations and evaluate the matrices in parallel. This could significantly speed up the computation for large matrices. However, it would also add complexity to the implementation and require additional computational resources. 
 
+# Largest Submatrix With Rearrangements Using Monte Carlo Tree Search
+
+This Python script solves the problem of finding the largest submatrix with all ones in a given binary matrix, where the columns of the matrix can be rearranged in any order. The script uses a Monte Carlo Tree Search (MCTS) algorithm to find the optimal column rearrangement.
+
+## Problem Description
+
+You are given a binary matrix of size m x n, and you are allowed to rearrange the columns of the matrix in any order. The goal is to find the area of the largest sub-matrix within the matrix where every element of the submatrix is 1 after reordering the columns optimally.
+
+## Functions
+
+The script includes the following functions:
+
+- `Node`: A class that represents each state in the search tree.
+
+- `monte_carlo_tree_search(root, iterations, max_depth)`: Performs the MCTS algorithm. It starts from the root node and performs selection, expansion, simulation, and backpropagation for a given number of iterations. It returns the matrix of the best child of the root node.
+
+- `largest_submatrix_mcts(matrix)`: Returns the area of the largest sub-matrix with all ones. It takes as input a binary matrix. If the matrix is empty or the first row is empty, it returns 0. Otherwise, it generates all possible matrices with permuted columns. Then, it evaluates the area of the largest sub-matrix for each permuted matrix and returns the maximum area found.
+
+## Considerations (again)
+
+The Monte Carlo Tree Search (MCTS) algorithm is a heuristic search algorithm that is used to solve optimization problems. In this script, it is used to find the optimal column rearrangement that maximizes the area of the largest sub-matrix with all ones. The algorithm consists of four steps: selection, expansion, simulation, and backpropagation. It continues the process until the computational budget is used up.
+
+Please note that this is a simplified implementation and may not perform optimally for large matrices or complex scenarios. For a more robust implementation, you might want to consider using an existing MCTS library or framework.
 
 
 
