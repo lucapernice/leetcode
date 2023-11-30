@@ -49,10 +49,6 @@ Finally, you could consider using parallel processing or distributed computing t
 
 This Python script solves the problem of finding the largest submatrix with all ones in a given binary matrix, where the columns of the matrix can be rearranged in any order. The script uses a Monte Carlo Tree Search (MCTS) algorithm to find the optimal column rearrangement.
 
-## Problem Description
-
-You are given a binary matrix of size m x n, and you are allowed to rearrange the columns of the matrix in any order. The goal is to find the area of the largest sub-matrix within the matrix where every element of the submatrix is 1 after reordering the columns optimally.
-
 ## Functions
 
 The script includes the following functions:
