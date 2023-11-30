@@ -1,2 +1,3 @@
 # leetcode
-Some leetcode solved problems
+Some LeetCode solved problems
+
