@@ -1,5 +1,6 @@
 import unittest
-from Largest_submatrix_with_rearrangements import consecutive_ones_row, consecutive_ones_col, all_permutations, matrix_column_permutation, eval_matrix, all_matrix_permutations
+from Largest_submatrix_with_rearrangements import consecutive_ones_row, consecutive_ones_col, all_permutations, \
+    matrix_column_permutation, eval_matrix, all_matrix_permutations, largest_submatrix
 
 
 class MyTestCase(unittest.TestCase):
@@ -117,6 +118,10 @@ class MyTestCase(unittest.TestCase):
         ]
         self.assertEqual(sorted(result), sorted(expected))
 
+    def test_example(self):
+        matrix = [[0,0,1],[1,1,1],[1,0,1]]
+        result = largest_submatrix(matrix)
+        self.assertEqual(result, 4)
 
 if __name__ == '__main__':
     unittest.main()
